@@ -1,0 +1,397 @@
+@import "reset"
+@import "vars"
+
+//main style
+html
+    scroll-behavior: smooth
+
+body
+    font-family: $fontMontserrat
+    background: $colorLiteGray
+    padding-top: 90px
+
+.header
+    width: 100%
+    height: 90px
+    display: flex
+    align-items: center
+    justify-content: center
+    position: fixed
+    top: 0
+    background: $colorWhite
+    overflow: hidden
+    opacity: 1
+    z-index: 9
+    transition: all .35s ease-out
+    .header-wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        max-width: 1140px
+        height: 100%
+        margin: 0 auto
+        .logo
+            display: flex
+            align-items: center
+            height: 100%
+            padding: 0 10px
+            .logo-img
+                width: 100px
+                height: auto
+
+        .menu
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 100%
+            transition: all .35s ease-out
+        .menu--show
+            display: flex !important
+            box-sizing: border-box
+            position: absolute
+            right: 0
+            top: 89px
+            background: $colorWhite
+            z-index: 99999
+            width: 100%
+            height: auto !important
+            padding: 40px 0
+            transition: all .35s ease-out
+            .menu-list
+                display: flex
+                flex-direction: column
+                box-sizing: border-box
+                width: 100%
+                .menu-item
+                    display: flex
+                    width: 100%
+                    .menu-item-link
+                        padding: 20px 0
+
+        .mobile
+            display: none
+            transition: all .35s ease-out
+            button
+                transition: all .35s ease-out
+                border: none
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: space-between
+                width: 40px
+                height: 26px
+                background: $colorWhite
+                padding: 0
+                margin: 0
+                span
+                    transition: all .35s ease-out
+                    display: flex
+                    width: 36px
+                    height: 2px
+                    background: $colorBlue
+            button.mobMenu--active
+                transition: all .35s ease-out
+                justify-content: center
+                span:first-child
+                    transition: all .35s ease-out
+                    position: absolute
+                    transform: rotate(45deg)
+                span:last-child
+                    transition: all .35s ease-out
+                    position: absolute
+                    transform: rotate(-45deg)
+                span:nth-child(2)
+                    display: none
+                    transition: all .35s ease-out
+
+    &--hide
+        height: 0
+        opacity: .5
+        top: -45px
+        transition: all .35s ease-out
+        .header-wrapper
+            .menu--show
+                display: none !important
+                opacity: 0
+                transition: all .35s ease-out
+
+.menu-list
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    .menu-item
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        .menu-item-link
+            color: $colorGray
+            font-size: 16px
+            font-weight: 500
+            text-decoration: none
+            position: relative
+            margin: 0 14px
+            &:after
+                content: ''
+                display: block
+                width: 0px
+                height: 1px
+                position: absolute
+                left: 0
+                bottom: -6px
+                background: #364C9C
+                transition: all .25s ease-out
+
+    .menu-item--active
+        .menu-item-link
+            color: $colorBlue
+            &:after
+                width: 100%
+                transition: all .25s ease-out
+
+.block-wrapper
+    width: 100%
+    height: 100%
+    max-width: 1140px
+    margin: 0 auto
+    box-sizing: border-box
+
+section
+    width: 100%
+    height: 100vh
+    .block-title
+        font-size: 25px
+        font-weight: 600
+        text-transform: uppercase
+        position: relative
+        &:before
+            content: ''
+            display: block
+            width: 70px
+            height: 2px
+            position: absolute
+            top: -20px
+            left: -30px
+            background: $colorBlue
+        &:after
+            content: ''
+            display: block
+            width: 70px
+            height: 2px
+            position: absolute
+            bottom: -20px
+            right: -30px
+            background: $colorBlue
+    .block-description
+        font-size: 16px
+        font-weight: 400
+
+section.block-banner
+    background: url("../img/banner.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    width: 100%
+    height: 636px
+    .block-wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+    .block-banner__title
+        color: $colorWhite
+        font-size: 55px
+        font-weight: 600
+    .block-banner__description
+        color: $colorWhite
+        font-size: 18px
+        font-style: italic
+        font-weight: 300
+        max-width: 660px
+        margin: 40px 0 78px 0
+        line-height: 1.5em
+
+section.block-service
+    width: 100%
+    height: 540px
+    .block-wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    .block-title
+        color: $colorBlue
+        margin: 30px 0
+    .block-description
+        color: $colorBlue
+        max-width: 92%
+        line-height: 2em
+        text-align: center
+        margin: 20px 0
+
+    .block-service__block
+        display: flex
+        align-items: center
+        justify-content: space-around
+        position: relative
+        width: 100%
+        .block-service__item
+            height: 200px
+            max-width: 220px
+            flex: 1
+            display: flex
+            flex-direction: column
+            align-items: center
+            .block-service__item-img
+                height: 77px
+                margin: 30px auto
+            .block-service__item-title
+                text-align: center
+                color: $colorBlue
+                font-size: 20px
+                font-weight: 600
+                font-style: italic
+
+section.block-about
+    width: 100%
+    height: 450px
+    background: url("../img/counter-bg.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    color: $colorWhite
+    .block-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    .block-title
+        margin: 20px 0
+        &:before,
+        &:after
+            background: $colorWhite
+
+    .block-description
+        max-width: 93%
+        line-height: 1.5em
+        text-align: center
+        margin: 20px 0
+
+section.block-contact
+    width: 100%
+    height: 758px
+    background: $colorWhite
+    color: $colorBlue
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    .block-wrapper
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+    .contact-head
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        height: 270px
+        .block-title
+            margin: 27px 0
+        .block-description
+            margin: 23px 0
+            text-align: center
+            line-height: 1.5em
+
+    .contact-body
+        display: flex
+        justify-content: space-between
+        width: 100%
+        height: 493px
+        .map
+            display: flex
+            width: 49%
+            height: 390px
+
+        .form
+            display: flex
+            width: 49%
+
+.main-form
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    table,
+    tbody,
+    label
+        width: 100%
+    input,
+    textarea
+        border: 1px solid $colorBlue
+        background: $colorWhite
+        display: flex
+        width: 100%
+        height: 50px
+        border-radius: 6px
+        padding: 0 20px
+        margin-bottom: 12px
+        box-sizing: border-box
+    label
+        textarea
+            height: 170px
+            margin-bottom: 30px
+            padding: 24px 20px
+
+    .submit
+        font-size: 16px
+        text-transform: uppercase
+        margin: 0
+        color: $colorWhite
+        background: $colorBlue
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 15px 44px
+        border-radius: 10px
+        width: auto
+        cursor: pointer
+
+.footer
+    color: $colorWhite
+    background: $colorNavy
+    width: 100%
+    height: 180px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .footer-menu
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 12px 0
+        .footer-menu__item
+            .footer-menu__item-link
+                color: $colorWhite
+                text-decoration: none
+                padding: 0 15px
+    .copyright
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 16px 0
+        letter-spacing: -1px
+
+input::placeholder,
+textarea::placeholder
+    color: #A9A9A9
+    font-size: 14px
+    letter-spacing: 1px
+    font-weight: 400
+    font-family: $fontMontserrat
+
+@import "mobile"

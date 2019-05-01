@@ -1,0 +1,71 @@
+@media screen and (max-width: 1180px)
+    .header-wrapper,
+    .block-wrapper
+        box-sizing: border-box
+        padding: 0 20px
+
+@media screen and (max-width: 780px)
+    .header
+        overflow: inherit
+        .header-wrapper
+            .menu
+                display: none
+                height: 0
+                transition: all .35s ease-out
+            .mobile
+                display: flex
+                transition: all .35s ease-out
+
+    section.block-service
+        max-height: inherit
+        height: 100%
+        padding: 50px 0
+        .block-wrapper
+            .block-service__block
+                flex-wrap: wrap
+                align-items: flex-start
+                .block-service__item
+                    height: 100%
+                    box-sizing: border-box
+                    width: 25%
+                    margin: 10px
+                    max-width: inherit
+                    width: 40%
+                    margin: 10px
+                    flex: inherit
+    section.block-about
+        max-height: inherit
+        height: 100%
+        padding: 40px 0
+    section.block-contact
+        max-height: inherit
+        height: 100%
+        padding-top: 30px
+        padding-bottom: 30px
+        .block-wrapper
+            .contact-body
+                height: inherit
+                flex-wrap: wrap
+                .map
+                    width: 100%
+                    margin: 20px auto 30px auto
+                .form
+                    width: 100%
+    .footer
+        padding: 20px 0
+        height: inherit
+        .footer-menu
+            flex-direction: column
+            width: 100%
+            .footer-menu__item
+                width: 100%
+                display: flex
+                align-items: inherit
+                justify-content: center
+                .footer-menu__item-link
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    box-sizing: border-box
+                    width: 100%
+                    padding: 16px 0

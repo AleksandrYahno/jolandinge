@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/icon/webservices_logo.svg">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+<header id="header" class="header">
+    <div class="header-wrapper">
+        <div class="logo">
+            <img src="img/icon/webservices_logo.svg" class="logo-img" alt="logo">
+        </div>
+        <div class="menu" id="menu">
+            <ul class="menu-list">
+                <li class="menu-item menu-item--active">
+                    <a href="#home" class="menu-item-link">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#service" class="menu-item-link">Services</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#about" class="menu-item-link">About Us</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#contact" class="menu-item-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile">
+            <button id="mobMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+<section class="block-banner" id="home">
+    <div class="block-wrapper">
+        <h1 class="block-banner__title">Solutions for your business</h1>
+        <p class="block-banner__description">Accept credit cards on your web store today! Customized e-commerce
+            solutions. All the tools you’ll need to grow your business.</p>
+    </div>
+</section>
+<section class="block-service" id="service">
+    <div class="block-wrapper">
+        <h3 class="block-title">Customer services</h3>
+        <p class="block-description">WebServices ltd. is everything even the most demanding customer looks for in a
+            payment service provider. Thanks to our expertise and years of experience in the field, you will start
+            accepting online payments within several business days.</p>
+        <div class="block-service__block">
+            <div class="block-service__item">
+                <img class="block-service__item-img" src="img/icon/fast_payment.svg" alt="Fast Payment">
+                <h5 class="block-service__item-title">Fast <br> Payment</h5>
+            </div>
+            <div class="block-service__item">
+                <img class="block-service__item-img" src="img/icon/data_authentication.svg"
+                     alt="Data authentication and processing">
+                <h5 class="block-service__item-title">Data authentication <br> and processing</h5>
+            </div>
+            <div class="block-service__item">
+                <img class="block-service__item-img" src="img/icon/secure_infrastructure.svg"
+                     alt="Secure IT Infrastructure">
+                <h5 class="block-service__item-title">Secure IT <br> Infrastructure</h5>
+            </div>
+            <div class="block-service__item">
+                <img class="block-service__item-img" src="img/icon/technical_support.svg" alt="Technical Support">
+                <h5 class="block-service__item-title">Technical <br> Support</h5>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="block-about" id="about">
+    <div class="block-wrapper">
+        <h3 class="block-title">About US</h3>
+        <p class="block-description">WebServices ltd. was among the first companies offering e-commerce and professional
+            payment processing services, modern fraud and chargeback prevention instruments and 24/7 customer
+            support.</p>
+        <p class="block-description">It did not take long before WebServices ltd. took up a leading position on the
+            market thanks to its constant development and a desire to overcome a growing competition with the aid of
+            advanced software and customizable services.</p>
+        <p class="block-description">Today, every business collaborating with WebServices ltd. can see a significant
+            growth in their revenue. The company works with businesses from all over the world aiming to meet and even
+            exceed expectations of the customers, both existing and new ones.</p>
+    </div>
+</section>
+<section class="block-contact" id="contact">
+    <div class="block-wrapper">
+        <div class="contact-head">
+            <h3 class="block-title">Contact Us</h3>
+            <p class="block-description">
+                Unit F, 11/F, CNT Tower, <br>
+                338 Hennessy Road, Wan Chai, Hong Kong
+            </p>
+        </div>
+        <div class="contact-body">
+            <div id="map" class="map"></div>
+            <div class="form">
+                <form id="mainForm" class="main-form">
+                    <table>
+                        <tr>
+                            <td>
+                                <input id="name" name="name" type="text" placeholder="Name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="mail" name="mail" type="email" placeholder="Email">
+                            </td>
+                        </tr>
+                    </table>
+                    <label>
+                        <textarea id="message" name="message" placeholder="Message"></textarea>
+                    </label>
+                    <input type="submit" id="submit" class="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <ul class="footer-menu">
+        <li class="footer-menu__item"><a href="" class="footer-menu__item-link">Home</a></li>
+        <li class="footer-menu__item"><a href="" class="footer-menu__item-link">Services</a></li>
+        <li class="footer-menu__item"><a href="" class="footer-menu__item-link">About Us</a></li>
+        <li class="footer-menu__item"><a href="" class="footer-menu__item-link">Contact Us</a></li>
+        <li class="footer-menu__item"><a href="" class="footer-menu__item-link">Privacy Policy</a></li>
+        <li class="footer-menu__item"><a href="" class="footer-menu__item-link">Terms & Conditions</a></li>
+    </ul>
+    <div class="copyright">All rights reserved © 2018</div>
+</footer>
+<script>
+    function initMap() {
+        var uluru = {lat: 50.4443227, lng: 30.477692};
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 12, center: uluru});
+        // var marker = new google.maps.Marker({position: uluru, map: map});
+    }
+</script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASt9qcW0e2ywzmkGELGrgkMmHk-Fb3cNQ&callback=initMap">
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

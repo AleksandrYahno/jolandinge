@@ -1,4 +1,4 @@
 # jolandinge
 
-# $ npm i 
-# $ gulp watch
+$ npm i 
+$ gulp watch
